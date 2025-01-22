@@ -44,7 +44,7 @@ const GFO = ( function () {
     setDocumentTitle( url );
 
     // Fetch the file and update the page content
-    fetchFile( COR.pathContent + url, options );
+    fetchFile( "https://heritage-happenings.github.io/roses/" + url, options );
 
   }
 
