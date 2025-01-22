@@ -50,9 +50,10 @@
       // Used below
       source: "https://github.com/heritage-happenings/roses",
 
+      ignoreFiles: [ "404.html", "favicon.ico", "index.html", "readme.html", "test.md" ],
+      
       filterFolders: ["code"], //[ "food-service", "happenings-issues:", "histories", "pages", "photos", "scans"],
 
-      ignoreFiles: [ "404.html", "favicon.ico", "index.html", "readme.html", "test.md" ],
     }
 
   </script>
@@ -147,12 +148,12 @@
 
         window.history.pushState( "", "", "./" + location.hash );
 
-        COR.ignoreFolders = COR.defaultIgnoreFolders;
+        //COR.ignoreFolders = COR.defaultIgnoreFolders;
 
       } else {
 
         //COR.pathContent = "https://heritage-happenings.github.io/";
-        COR.ignoreFolders = [];
+        //COR.ignoreFolders = [];
 
       }
 
