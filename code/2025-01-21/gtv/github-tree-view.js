@@ -72,9 +72,7 @@ async function fetchGitHubRepoContents ( user, repo ) {
   let topLevelItems = tree.filter( item => {
     const pathParts = item.path.split( '/' );
     return pathParts.length === 1;
-  } );
-
-  topLevelItems = topLevelItems.filter( item => ( item.type === 'blob' && ignoreFiles.includes( item.path ) === false) || filterFolders.includes( item.path ) === false );
+  } ).filter( item => ( item.type === 'blob' && ignoreFiles.includes( item.path ) === false) || filterFolders.includes( item.path ) === false );
 
   div.appendChild( createTree( topLevelItems, '' ) );
 
